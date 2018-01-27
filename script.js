@@ -1,6 +1,7 @@
 // This script can be used in a webpage to get a sorted list of ANOVAcoin token holders
 // Written by hamish ivison
-let Web3 = require('web3');
+
+var Web3 = require('web3');
 
 if (typeof web3 !== 'undefined') {
     web3 = new Web3(web3.currentProvider);
@@ -349,21 +350,23 @@ var contract = web3.eth.contract([
 	}
 ]).at("0xa85ae31b3483d4402bf20be72d20677ea8127b8b"); // here we create the contract object to work off
 
-var addresses = [];
-var addrLength = contract.getAddressAmount();
-console.log(addrLength);
-for (var i = 0; i < addrLength; i++) {
-    addresses.push(contract.getAddress(i));
-}
+function getBalances() {
+    var addresses = [];
+    var addrLength = contract.getAddressAmount();
+    for (var i = 0; i < addrLength; i++) {
+        addresses.push(contract.getAddress(i));
+    }
 
-// we now have the addresses, so all we do is grab the values
-// note these will all be BigNumber objects
-var balances = addresses.map(addr => {
-    var obj = {};
-    obj.address = addr;
-    obj.balance = contract.getBalanceOf(addr);
-    return obj;
-});
+    // we now have the addresses, so all we do is grab the values
+    // note these will all be BigNumber objects
+    var balances = addresses.map(addr => {
+        var obj = {};
+        obj.address = addr;
+        obj.balance = contract.getBalanceOf(addr).toNumber();
+        return obj;
+    });
 
+    balances.sort((a, b) => a-b);
+    return balances
+};
 
-console.log(balances);

@@ -1,0 +1,18 @@
+<!doctype>
+<html>
+    <head>
+        <!-- import required scripts - bignumber for web3, web3 for ethereum stuff -->
+        <script type="text/javascript" src="bignumber.min.js"></script>
+        <script type="text/javascript" src="web3.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <p id="dump"></p>
+        <script type="text/javascript">
+            var balances = getBalances();
+            document.getElementById("dump").innerText = JSON.stringify(balances);
+        </script>
+
+    </body>
+</html>
