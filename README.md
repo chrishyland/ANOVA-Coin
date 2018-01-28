@@ -16,6 +16,10 @@ Furthermore, there are opportunities to accumulate additional coins throughout t
 * Receive 10 coins for each project you complete.
 * Receive 5 coins for each blog you contribute.
 
+## Viewing contract details
+
+A version of the contract has been deployed to the Ropsten testnet! open index.html to see all the current token holders (and how much they hold!).
+
 ## Contributors
 The ANOVA Project - Chris Hyland, Hamish Ivison.
 

@@ -12,6 +12,8 @@ contract ANOVACoin {
 
     // This creates an array with all balances
     mapping (address => uint256) public balanceOf;
+    address[] private addresses; // list of all users who have had or have tokens
+    mapping (address => bool) internal added; // mapping of whether a user has been added to address array or not
     mapping (address => mapping (address => uint256)) public allowance;
 
     // This generates a public event on the blockchain that will notify clients
@@ -26,12 +28,12 @@ contract ANOVACoin {
      * Initializes contract with initial supply tokens to the creator of the contract
      */
     function ANOVACoin(
-        uint256 initialSupply,
-        string tokenName,
-        string tokenSymbol
+        uint256 initialSupply
     ) public {
         totalSupply = initialSupply * 10 ** uint256(decimals);  // Update total supply with the decimal amount
-        balanceOf[msg.sender] = totalSupply;                // Give the creator all initial tokens
+        balanceOf[msg.sender] = totalSupply;                    // Give the creator all initial tokens
+	added[msg.sender] = true;                               // Add creator to list of people with tokens 
+	addresses.push(msg.sender);
         name = "ANOVACoin";
         symbol = "ANVA";
     }
@@ -46,6 +48,11 @@ contract ANOVACoin {
         require(balanceOf[_from] >= _value);
         // Check for overflows
         require(balanceOf[_to] + _value > balanceOf[_to]);
+	// Add user to address array if they have not been added'
+	if (!added[_to]) {
+		added[_to] = true;
+		addresses.push(_to);
+	}
         // Save this for an assertion in the future
         uint previousBalances = balanceOf[_from] + balanceOf[_to];
         // Subtract from the sender
@@ -149,5 +156,19 @@ contract ANOVACoin {
         totalSupply -= _value;                              // Update totalSupply
         Burn(_from, _value);
         return true;
+    }
+
+    // Mapping dump functions - for tracking token balances for a leaderboard
+    function getAddressAmount() public view returns (uint length) {
+        return addresses.length;
+    }
+    
+    function getAddress(uint i) public view returns (address userAddress) {
+        require(i < addresses.length);
+        return addresses[i];	
+    }
+
+    function getBalanceOf(address a) public view returns (uint256 balance) {
+	    return balanceOf[a];
     }
 }
