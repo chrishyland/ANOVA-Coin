@@ -1,0 +1,718 @@
+/*******************************************************
+ ********************** Global *************************
+ *******************************************************/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 400;
+    color: #D4D4D4;
+    padding-bottom: 5%;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 100;
+    color: #284661;
+}
+
+h2:after {
+    background: #2d4f6c;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 40px;
+    color: #000000;
+}
+
+h4 {
+    font-size: 25px;
+    color: #a8a8a8
+}
+
+h5 {
+    font-size: 20px;
+}
+
+* {
+    border-radius: 0 !important;
+}
+
+.container-fluid p {
+    font-size: 25px;
+    color: black;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 2%;
+}
+
+body .container-fluid:nth-child(even){
+    background-color: #F3F3F3;
+}
+
+.btn {
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #FFFFFF;
+    transition: all .5s;
+    border-color: #FFFFFF;
+    border-radius: 25px !important;
+    font-weight: 300;
+}
+
+.btn-primary:hover {
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    background-color: #909090;
+    /*border-width: thick;*/
+    border-color: #FFFFFF;
+}
+
+.btn-primary:active:focus, .btn-primary:focus, .btn-primary:visited {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+table {
+    color: black;
+}
+
+/*******************************************************
+ ********************** Homepage ***********************
+ *******************************************************/
+
+#homepage .container-fluid {
+    padding: 2% 0% 0% 0%;
+    margin: 0;
+    max-width: 100%;
+}
+
+#homepage h3 {
+    color: #FFFFFF;
+}
+
+#homepage h4 {
+    color: #2d4f6c;
+    font-weight: 100;
+}
+
+#homepage .col-sm-6 {
+    padding: 0;
+}
+
+#homepage .container-fluid h3 {
+    font-size: 40px;
+    color: #FFFFFF;
+    font-weight: normal;
+    margin-top: 1em;
+}
+
+#homepage .container-fluid p {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 350;
+    margin-top: 1em;
+}
+
+#homepage .row {
+    padding: 0;
+    margin: 0;
+}
+
+#homepage .row.flex-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    min-height: 330px;
+    margin-top: 3rem;
+  }
+
+#homepage .carousel.slide{
+  margin-top: 3rem;
+}
+.row.flex-container > [class*='col-'] {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+}
+
+.student {
+    background-image: url("/images/hompage-student.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(80%);
+}
+
+.industry {
+    background-image: url("/images/homepage-industry.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(80%);
+}
+
+.student, .industry {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+}
+
+.btn-container {
+    margin-top: 6%;
+    font-weight: 10px;
+}
+
+.btn-container a{
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.carousel-caption {
+    top: 45%;
+    transform: translateY(-50%);
+    bottom: initial;
+    font-size: 5px;
+}
+
+.carousel-caption h3{
+    color: #ffffff;
+    font-size: 65px;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.carousel-caption h5{
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 350;
+    /* padding-top: 5rem; */
+    padding-bottom: 6rem;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(80%);
+}
+
+/*******************************************************
+ ********************** About Us ***********************
+ *******************************************************/
+
+#about-us-page .container-fluid {
+    margin: 0%;
+}
+
+#about-us-page .wrapper{
+    margin: 0%;
+}
+
+#about-us-page .wrapper > img {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 20%;
+    margin: 4%;
+}
+
+#about-us-page .wrapper .desc {
+    vertical-align: middle;
+    display: inline-block;
+    width: 60%;
+}
+
+#about-us-page h3 {
+    font-size: 45px;
+    color: #2d4f6c;
+    font-weight: 250;
+    margin-top: -4%;
+}
+
+#about-us-page .img-responsive.center-block{
+  margin-top: -1%;
+  padding: 3%;
+}
+/*******************************************************
+ *********************** Events ************************
+ *******************************************************/
+ #event-page .wrapper {
+     padding-left: 5%;
+     padding-right: 5%;
+ }
+
+ #event-page .wrapper > img {
+     vertical-align: middle;
+     display: inline-block;
+     max-width: 20%;
+ }
+
+ #event-page .wrapper .desc {
+     vertical-align: middle;
+     display: inline-block;
+     width: 70%;
+ }
+
+ #event-page .btn-outline {
+     color: #000000;
+     border-color: #000000;
+ }
+
+ #event-page .wrapper > a {
+     max-width: 15%;
+     display: inline-block;
+     margin: 2%;
+ }
+
+ /*******************************************************
+  *********************** Students ***********************
+  *******************************************************/
+#student-page .wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#student-page .wrapper > img {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 20%;
+}
+
+#student-page .wrapper .desc {
+    vertical-align: middle;
+    display: inline-block;
+    width: 70%;
+}
+
+#student-page .btn-outline {
+    color: #000000;
+    border-color: #000000;
+}
+
+#student-page .wrapper > a {
+    max-width: 15%;
+    display: inline-block;
+    margin: 2%;
+}
+
+/* Why join us */
+
+#student-page h3 {
+    font-size: 45px;
+    color: #2d4f6c;
+    font-weight: 250;
+    margin-top: -5%;
+}
+
+#student-page .img-responsive.center-block{
+  margin-top: -5%;
+  padding: 3%;
+}
+
+
+ /*******************************************************
+  *********************** Industry ***********************
+  *******************************************************/
+#industry-page .wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#industry-page .wrapper > img {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 20%;
+}
+
+#industry-page .wrapper .desc {
+    vertical-align: middle;
+    display: inline-block;
+    width: 70%;
+}
+
+#industry-page .btn-outline {
+    color: #000000;
+    border-color: #000000;
+}
+
+#industry-page .wrapper > a {
+    max-width: 15%;
+    display: inline-block;
+    margin: 2%;
+}
+
+/* Services we provide */
+
+#industry-page h3 {
+    font-size: 45px;
+    color: #2d4f6c;
+    font-weight: 250;
+}
+
+.img-list{
+  padding: 20%;
+  margin: 50%;
+}
+
+.wrapper{
+  margin-top: 5%;
+}
+
+.stuff{
+  padding-right: 7%;
+  margin-right: 8%;
+}
+/*******************************************************
+ *********************** Contact ***********************
+ *******************************************************/
+
+#contact-us-page .wrapper {
+   padding-left: 5%;
+   padding-right: 5%;
+}
+
+#contact-us-page .wrapper > img {
+   vertical-align: middle;
+   display: inline-block;
+   max-width: 20%;
+}
+
+#contact-us-page .wrapper .desc {
+   vertical-align: middle;
+   display: inline-block;
+   width: 70%;
+}
+
+#contact-us-page .btn-outline {
+   color: #000000;
+   border-color: #000000;
+}
+
+#contact-us-page .wrapper > a {
+   max-width: 15%;
+   display: inline-block;
+   margin: 2%;
+}
+
+#contact-us-page form {
+    color: #000;
+}
+
+#contact-us-page input {
+    width: 100%;
+}
+
+#contact-us-page input[name="extra_first_name"],
+#contact-us-page input[name="extra_last_name"] {
+    width: 49.7%;
+}
+
+#contact-us-page textarea {
+    width: 100%;
+}
+#contact-us-page .field_container {
+    display: block;
+    width: auto;
+    padding: 10px 10px 10px 10px;
+}
+
+
+/*******************************************************
+ ***************** Header section **********************
+ *******************************************************/
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background: rgba(0,0,0,0);
+    margin: 0px;
+    padding: 0px !important;
+    font-weight: 100;
+    text-align: right;
+    z-index: 999;
+}
+
+.logo {
+    float: left;
+    height: 100px;
+    padding: 10px;
+}
+
+.menubtn {
+    display: none;
+}
+
+/* The navigation bar text. */
+.default-content {
+    display: block;
+    padding: 10px;
+    line-height: 80px;
+    font-size: 15px;
+    word-spacing: 15px;
+
+}
+
+.default-content > a {
+    padding-right: 15px;
+    color: #fff;
+}
+
+.default-content > a:hover {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.img-header {
+    background-image:
+        linear-gradient(rgba(60,88,113,0.8), rgba(60,88,113,0.8)),
+        url("/images/desk_three.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    text-align: center;
+    height: 580px;
+}
+
+.img-header h1 {
+    font-size: 65px;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.img-header p {
+    font-size: 25px;
+    font-weight: 100;
+    color: #FFFFFF;
+    padding-bottom: 1.5%;
+}
+
+#homepage .img-header {
+    background-image: url("/images/homepage-header.png");
+}
+
+#about-us-page .img-header {
+    background-image: url("/images/about-us-header.png");
+}
+
+#student-page .img-header {
+    background-image: url("/images/student-header_2.png");
+}
+
+#industry-page .img-header {
+    background-image: url("/images/industry-header.png");
+}
+
+#events-page .img-header {
+    background-image: url("/images/events-header.png");
+}
+
+#contact-us-page .img-header {
+    background-image: url("/images/contact-header.png");
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #FFFFFF;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+
+/*******************************************************
+ *********************** Footer ************************
+ *******************************************************/
+
+footer .container-fluid {
+    /* background-color: #FFFFFF; */
+    color: #0B1125;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+footer .container-fluid ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+}
+
+footer li > a {
+    color: #666666;
+    font-size: 17px;
+}
+
+footer .col-sm-12 a {
+    padding-right: 15px;
+}
+
+footer a:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: #0B1125;
+}
+
+/*******************************************************
+ ********************* Responsive **********************
+ *******************************************************/
+
+/* For mobile phones (vertical)*/
+@media screen and (max-width: 576px){
+
+}
+
+/* For mobile phones (vertical and horizontal) */
+@media screen and (max-width: 768px){
+
+    .default-content {
+        display: none;
+    }
+
+    span.menubtn {
+        height: 40px;
+        width: 40px;
+        top: 15px;
+        right: 35px;
+        font-size:40px;
+        cursor:pointer;
+        display: block;
+        margin: 0px;
+        position: absolute;
+    }
+
+    .overlay {
+        overflow:hidden;
+    }
+
+    .overlay a {
+        font-size: 40px;
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    .img-header {
+        padding-top: 22%;
+        height: 25px;
+    }
+
+    .img-header {
+        height: 500px;
+    }
+
+    p {
+        font-size: 20px !important;
+    }
+
+    h1 {
+        font-size: 45px !important;
+    }
+
+    h2 {
+        font-size: 35px !important;
+    }
+
+    h3 {
+        font-size: 30px !important;
+    }
+
+    .student, .industry {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    /* Stacking student and industry */
+    .row.flex-container > [class*='col-'] {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .carousel-caption h5 {
+        font-size: 20px;
+    }
+
+    .wrapper {
+        margin-top: 2% !important;
+    }
+
+    .wrapper img {
+        display: block !important;
+        margin: 0 auto !important;
+        max-width: 60% !important;
+    }
+
+    .wrapper .desc {
+        display: block;
+        width: 100% !important;
+        margin-top: 1% !important;
+    }
+
+}
